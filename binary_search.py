@@ -1,6 +1,3 @@
-
-
-
 def binary_search(list, target):
     """
         Binary Search Al
