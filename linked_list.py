@@ -18,7 +18,7 @@ class LinkedList:
         self.head = newNode
 
 
-    def apppend(self, data):
+    def append(self, data):
         newNode = Node(data)
 
         if not self.head:
@@ -43,34 +43,70 @@ class LinkedList:
             current = current.next
         print("None")
         print("Size of the Linked List is: ", count)
-# Example Usage
-myList = LinkedList()
-myList.apppend(10)
-myList.apppend(30)
-myList.apppend(50)
 
-print("My LinkedList values are given as: ")
-myList.display()
-
-myList.apppend(100)
-print("My LinkedList after appending 100")
-myList.display()
 
 # Operations performed on Linked Lists
 
-# Accessing, Searching
+# Searching
+    def search(self, key):
+        current = self.head
+
+        while current:
+            if current.data == key:
+                print(key, end=" Is found in the list")
+                return      
+            current = current.next
+        
+        print(key, end=" Not found in the list")
+
 
 
 # Deletion 
-def delete(self, key):
-    current = self.head
+    def delete(self, key):
+        current = self.head
 
     # Case 1: if the head node holds that data to be deleted, 
     # in most cases, this function is irrelevant if Case 2 is present
 
-    if current.data == key:
-        self.head = current.next
-        current.data = None
+        if current.data == key:
+            self.head = current.next
+            current.data = None
 
-   # Case 2: Traverses the whole list to delete the target data, 
-   # O(n) and therefore arrays perform better here
+# Case 2: Traverses the whole list to delete the target data, 
+# O(n) and therefore arrays perform better here
+        prev = None
+        while current.data != key:
+            prev = current
+            current = current.next
+        
+        if current is None:
+            print("Value not found in the list")
+        else:
+            prev.next = current.next
+            current = None
+            print(key, end=" Has been deleted")
+
+# Example Usage
+myList = LinkedList()
+myList.append(10)
+myList.append(20)
+myList.append(30)
+myList.append(40)
+myList.append(50)
+
+print("My LinkedList values are given as: ")
+myList.display()
+
+myList.prepend(15)
+print("My LinkedList after prepending 15")
+myList.display()
+
+myList.append(100)
+print("My LinkedList after appending 100")
+myList.display()
+
+myList.delete(30)
+print("My LinkedList after deleting 30")
+myList.display()
+
+myList.search(12)
