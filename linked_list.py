@@ -49,9 +49,10 @@ class LinkedList:
             return
     # If position is head
         if position == 1:
-            self.next = self.head
+            newNode.next = self.head
             self.head = newNode
             return 
+        
     # Traverse list to find target position 
         current = self.head
         prev = None
@@ -83,7 +84,7 @@ myList.apppend(50)
 # print("My LinkedList after appending 100")
 # myList.display()
 
-myList.insert(70, 1)
+myList.insert(70, 10)
 print("My LinkedList after inserting 70 at postion 3")
 myList.display()
 
