@@ -31,6 +31,21 @@ class LinkedList:
 
         lastNode.next = newNode
 
+# Case 2: Insert operation which takes constant time, only that the time taken to find the actual 
+# target index(position etc) takes linear time
+
+    def insert(self, data, key):
+        current = self.head
+        prev = None
+        while current.data != key:
+            prev = current
+            current = current.next
+        newNode = Node(data)
+        prev.next = newNode
+        current.
+
+        
+
 #Display function
     def display(self):
         current = self.head
