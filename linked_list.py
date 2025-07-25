@@ -33,7 +33,7 @@ class LinkedList:
 
 # Case 2: Insert operation which takes constant time, only that the time taken to find the actual 
 # target index(position etc) takes linear time
-     def insert(self, data, position):
+    def insert(self, data, position):
         newNode = Node(data)
     # If list is empty
         if self.head == None:
