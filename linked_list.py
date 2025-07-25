@@ -42,7 +42,6 @@ class LinkedList:
             current = current.next
         newNode = Node(data)
         prev.next = newNode
-        current.
 
         
 
