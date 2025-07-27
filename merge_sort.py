@@ -11,14 +11,18 @@ def merge(list, left, midpoint, right):
         R[j] = list[midpoint + 1 + j]
 # Initialize k as starting point of new array
     k=left
+    i = 0
+    j = 0
 # Loop to merge based on comparison
     while i < n1 and j < n2:
-        if i < j:
+        if L[i] <= R[j]:
             list[k] = L[i]
             i += 1
+            k += 1
         else:
             list[k] = R[j]
             j += 1
+            k += 1
 # If there are remaining elements, in the case that one of the array finishes before the other, resolve that with the following
     while i < n1:
         list[k] = L[i]
@@ -41,3 +45,9 @@ def merge_sort(list, left, right):
         merge(list, left, midpoint, right)
     
     
+# Use example
+my_list = [5, 8, 6, 7, 1, 2, 5, 7, 3, 4, 9, 10]
+
+merge_sort(my_list, 0, 11)
+
+print("Sorted Array: ", my_list)
