@@ -23,6 +23,7 @@ This repository is a hands-on journey through essential data structures and algo
 
 ### 🔹 Algorithms
 - Searching (Linear, Binary)
+- Sorting (MergeSort on Arrays and Linked lists)
 
 ---
 

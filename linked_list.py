@@ -35,7 +35,6 @@ class LinkedList:
         print(count, end=" is the size of linkedlist")
 # Case 2: Insert operation which takes constant time, only that the time taken to find the actual 
 # target index(position etc) takes linear time
-
     def insert(self, data, position):
         newNode = Node(data)
     # If list is empty
