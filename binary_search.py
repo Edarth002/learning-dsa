@@ -1,6 +1,6 @@
 def binary_search(list, target):
     """
-        Binary Search Al
+        Binary Search Algorithm
     """
     first = 0
     last = len(list) - 1
@@ -15,11 +15,3 @@ def binary_search(list, target):
         else: 
             first = midpoint  + 1
     return "Target not found"
-
-list = [0,1,2,3,4,5,6]
-"""
-    target = 10
-"""
-target = 3
-
-print("The target is found at index: ",binary_search(list, target))
