@@ -10,7 +10,3 @@ def quicksort(arr):
 
     return quicksort(left) + [pivot] + quicksort(right)
 
-# Example usage
-myArr = [5,7,6,9,2,8,9,2]
-sorted_array = quicksort(myArr)
-print("Sorted array is given as: ", sorted_array)
